@@ -1,0 +1,14 @@
+<?php
+	$_product = Mage::registry('current_product'); 
+?>
+   	<button type="button" class="button" style="margin:0 5px;" name="add to checkout" onclick="return addtocheckout(<?php echo $_product->getId(); ?>)" value="DIRECT CHECKOUT" title="DIRECT CHECKOUT"><span>Direct Checkout</span></button>
+
+    <script type="text/javascript">
+   	function addtocheckout(id)
+		{
+		var myform = document.getElementById('product_addtocart_form');
+		var qty = document.getElementById('qty').value;
+		myform.action = "<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>checkout/cart/addcheckout/product/"+ id +"/qty/"+qty+"/";
+		myform.submit();
+		}
+   </script>

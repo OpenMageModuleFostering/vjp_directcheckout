@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/VJP_DirectCheckout",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Direct Checkout",
+    "authors": [
+    {
+        "name": "vishal4671",
+        "email": "vishal6714@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

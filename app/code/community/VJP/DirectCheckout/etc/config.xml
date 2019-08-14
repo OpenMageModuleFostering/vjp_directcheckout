@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+	<global>
+		<modules>
+                <vjp_directcheckout>
+                        <version>1.0.0</version>
+                </vjp_directcheckout>
+        </modules>
+		<blocks>
+			<directcheckout>
+				<rewrite>
+				 <directcheckout>VJP_DirectCheckout_Block_DirectCheckout</directcheckout>
+				</rewrite>
+			</directcheckout>
+		 
+<!--            <catalog>
+               <rewrite>
+                   <directcheckout>VJP_DirectCheckout_Block_Catalog</directcheckout>
+            	</rewrite>
+			</catalog>				
+-->		</blocks>
+		<rewrite>
+                <vjp_directcheckout_checkout_cart>
+                    <from><![CDATA[#^/checkout/cart/#]]></from>
+                    <to>/directcheckout/checkout_cart/</to>
+                </vjp_directcheckout_checkout_cart>
+         </rewrite>
+        </global>
+	   <frontend>
+                <routers>
+                        <directcheckout>
+                                <use>standard</use>
+                                <args>
+                                      <module>VJP_DirectCheckout</module>
+                                      <frontName>directcheckout</frontName>
+                                </args>
+                        </directcheckout>
+                </routers>
+		<layout>
+			<updates>
+				<directcheckout>
+		   		      <file>directcheckout.xml</file>
+				</directcheckout>
+			</updates>
+       		</layout>
+        </frontend>
+</config>
